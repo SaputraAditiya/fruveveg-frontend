@@ -3,6 +3,7 @@ import AdminLayout from '../../components/layout/AdminLayout'
 import { getAllProducts, createProduct, updateProduct, deleteProduct, getAllCategories } from '../../api/admin.api'
 import { Plus, Pencil, Trash2, X } from 'lucide-react'
 import toast from 'react-hot-toast'
+import { API_BASE_URL } from '../../api/client'
 
 export default function AdminProducts() {
   const [products, setProducts] = useState([])
@@ -159,7 +160,7 @@ export default function AdminProducts() {
                     <tr key={product.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4">
                         <img
-                          src={`http://localhost:3000${product.image}`}
+                          src={`${API_BASE_URL}${product.image}`}
                           alt={product.name}
                           className="w-12 h-12 object-cover rounded"
                         />

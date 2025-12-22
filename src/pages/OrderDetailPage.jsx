@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getOrderById, cancelOrder } from '../api/order.api'
 import { useParams, useNavigate } from 'react-router-dom'
+import { API_BASE_URL } from '../api/client'
 import Container from '../components/layout/Container'
 import { ArrowLeft, MapPin, CreditCard, Package, XCircle, CheckCircle, Clock, Truck, Loader2 } from 'lucide-react'
 import toast from 'react-hot-toast'
@@ -188,7 +189,7 @@ export default function OrderDetailPage() {
             <div key={item.id} className="card p-4">
               <div className="flex gap-4">
                 <img
-                  src={`http://localhost:3000${item.product.image}`}
+                  src={`${API_BASE_URL}${item.product.image}`}
                   alt={item.product.name}
                   className="w-24 h-24 object-cover rounded-lg"
                 />

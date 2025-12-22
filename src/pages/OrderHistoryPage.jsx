@@ -3,6 +3,7 @@ import { getMyOrders } from '../api/order.api'
 import { useNavigate } from 'react-router-dom'
 import Container from '../components/layout/Container'
 import { Package, Clock, CheckCircle, XCircle, Truck, ShoppingBag } from 'lucide-react'
+import { API_BASE_URL } from '../api/client'
 
 export default function OrderHistoryPage() {
   const [orders, setOrders] = useState([])
@@ -164,7 +165,7 @@ export default function OrderHistoryPage() {
                   {order.items.slice(0, 5).map((item, idx) => (
                     <img
                       key={idx}
-                      src={`http://localhost:3000${item.product.image}`}
+                      src={`${API_BASE_URL}${item.product.image}`}
                       alt={item.product.name}
                       className="w-10 h-10 rounded-full border-2 border-white object-cover"
                     />

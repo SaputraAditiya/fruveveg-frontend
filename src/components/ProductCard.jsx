@@ -1,5 +1,6 @@
 import { ShoppingCart, Package } from "lucide-react"
 import { useCartStore } from "../store/cart.store"
+import { API_BASE_URL } from "../api/client"
 import toast from "react-hot-toast"
 
 export default function ProductCard({ product }) {
@@ -27,7 +28,7 @@ export default function ProductCard({ product }) {
       {/* Image */}
       <div className="relative overflow-hidden bg-gray-100 aspect-square">
         <img
-          src={`http://localhost:3000${product.image}`}
+          src={`${API_BASE_URL}${product.image}`}
           alt={product.name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
         />

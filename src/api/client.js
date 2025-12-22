@@ -6,6 +6,8 @@ export const api = axios.create({
     baseURL: API_URL,
 })
 
+export const API_BASE_URL = API_URL.replace('/api', '')
+
 api.interceptors.request.use((config) => {
     const token = localStorage.getItem('token')
     if (token) {

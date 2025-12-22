@@ -4,6 +4,7 @@ import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from "lucide-react"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { createOrder } from "../api/order.api"
+import { API_BASE_URL } from "../api/client"
 import toast from "react-hot-toast"
 
 export default function CartPage() {
@@ -80,7 +81,7 @@ export default function CartPage() {
               <div className="flex gap-4">
                 {/* Image */}
                 <img
-                  src={`http://localhost:3000${item.image}`}
+                  src={`${API_BASE_URL}${item.image}`}
                   alt={item.name}
                   className="w-24 h-24 object-cover rounded-lg"
                 />
