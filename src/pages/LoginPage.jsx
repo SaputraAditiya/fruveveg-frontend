@@ -44,8 +44,8 @@ export default function LoginPage() {
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl mb-4">
-            <span className="text-white text-2xl font-bold">F</span>
+          <div className="inline-flex items-center justify-center w-36 h-36 mb-4">
+            <span><img src="logo-name.png" alt="" /></span>
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Welcome Back</h1>
           <p className="text-gray-600 mt-2">Sign in to your FruVeveg account</p>
